@@ -75,8 +75,11 @@ if(isset($_GET['id'])){
 						<label>Entry
 							<textarea name="entry" cols="45" rows="10"><?php if($edit){echo $e['entry'];}?></textarea>
 						</label>
-						<input type="submit" name="submit" value="<?php if($edit){echo'Update';}else{ echo'Save Entry';}?>" />
-						<input type="submit" name="cancel" value="Cancel" />
+						<input type="submit" name="submit" value="<?php if($edit){echo'Update';}else{ echo'Save Entry';}?>" />&nbsp;&nbsp;
+						<input type="submit" name="cancel" value="Cancel"/>
+						<?php if($edit){ ?>
+						<a href="delete_blog.php?id=<?php echo urlencode($_GET['id']); ?>" onclick="return confirm('Are you sure!');">Delete Blog</a>
+						<?php } ?>
 					</fieldset>
 				</form>
 			</section>
