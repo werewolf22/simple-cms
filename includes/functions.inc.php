@@ -13,20 +13,16 @@ function retrieveEntries($db, $id=NULL)
 		if (!$e) {
 			return null;
 		}
-	}
-	else{
+	}else{
 		$sql = "SELECT id, title
 		FROM entries
 		ORDER BY created DESC";
+		$e = [];
 		foreach($db->query($sql) as $row) {
-		$e[] = array('id' => $row['id'],'title' => $row['title']);
-	}
-	$fulldisp =NULL;
-	if(!is_array($e))
-	{
-		$fulldisp = 1;
-		$e = array('title' => 'No Entries Yet','entry' => '<a href="blog.php">Post an entry!</a>');
-	}
+			$e[] = array('id' => $row['id'],'title' => $row['title']);
+		}
+		$fulldisp =NULL;
+		
 	}
 	array_push($e, $fulldisp);
 	return $e;
