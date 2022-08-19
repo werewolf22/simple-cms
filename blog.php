@@ -1,3 +1,5 @@
+<?php include "includes/session.php";?>
+<?php confirm_logged_in();?>
 <?php require_once("includes/connection.php");?>
 <?php include_once 'includes/functions.inc.php';?>
 <?php require_once("includes/functions.php");?>
@@ -66,7 +68,7 @@ if(isset($_GET['id'])){
 						echo "<h3 style=\"color:red;\">". $message1 ."</h3>" ;
 					}
 					?>				
-				<form method="post" action="<?php if($edit){echo "blog.php?id=".$_GET['id'];}else{echo "includes/update.inc.php";}?>">
+				<form method="post" action="<?php if($edit){echo "blog.php?id=".$_GET['id'];}else{echo "create_blog.php";}?>">
 					<fieldset>
 						<legend><?php if($edit){ echo"Update";}else{echo "New Entry Submission";}?></legend>
 						<label>Title

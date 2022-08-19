@@ -17,15 +17,12 @@
 				} elseif($fulldisp==1){
 					echo "<h2>".$e['title']."</h2>";  
 					echo "<p>".$e['entry']."</p>"; 
-					echo '<p>
-				<a href="./">Back to Latest Entries</a>
-				</p>';
 				}else{
 					echo "Welcome to ASCol...";
-					if(!$e)
-					{
-						echo '<h2>No Entries Yet </h2><p><a href="blog.php">Post an entry!</a></p>';
-					}
+					// if(!$e)
+					// {
+					// 	echo '<h2>No Entries Yet </h2><p><a href="blog.php">Post an entry!</a></p>';
+					// }
 				}
 				?>
 			</td>
@@ -36,15 +33,15 @@
 	<h2>&nbsp;&nbsp;  Blogs</h2>
 	<article>
 		<ul class="pages">
-		<?php 
-		if ($fulldisp==NULL) { 
-		// Loop through each entry
-			foreach($e as $entry) { ?>
-				<a href="index.php?id=<?php echo $entry['id']; ?>">
-				<?php echo "<li>&nbsp;".$entry['title']."</li>"; ?>
-				</a>
-			<?php }
-		} ?>
+		<?php
+        $blogs = retrieveEntries($db);
+        array_pop($blogs);
+        // Loop through each entry
+        foreach($blogs as $blog) { ?>
+            <a href="index.php?id=<?php echo $blog['id']; ?>">
+            <?php echo "<li>&nbsp;".$blog['title']."</li>"; ?>
+            </a>
+        <?php } ?>
 	</ul>
 	</article>				 		 
 </aside>

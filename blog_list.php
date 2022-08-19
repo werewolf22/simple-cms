@@ -1,3 +1,5 @@
+<?php include "includes/session.php";?>
+<?php confirm_logged_in();?>
  <?php require_once("includes/connection.php");?>
   <?php include_once 'includes/functions.inc.php';?>
  <?php require_once("includes/functions.php");?>
@@ -16,21 +18,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <body>
 <div class="container">
 <section>
-        <center>
-                <a href="students.php">Return to menu</a>
-                <h2><strong>The available blogs are given below:</strong></h2>
-                <ul class="pages">
-                <?php 
-                foreach($e as $entry) { ?>
-                        <a href="blog.php?id=<?php echo $entry['id']; ?>">
-                        <?php echo "<li>&nbsp;".$entry['title']."</li>"; ?>
-                        </a>
-                <?php } ?>
-        </center>
-                       <p class="backlink">
-                       <a href="blog.php">&nbsp;Post a New Entry</a>
-                       </p>
-                       </ul>
+    <center>
+        <a href="students.php">Return to menu</a>
+        <h2><strong>The available blogs are given below:</strong></h2>
+        <ul class="pages">
+            <?php 
+            foreach($e as $entry) { ?>
+                <a href="blog.php?id=<?php echo $entry['id']; ?>">
+                <?php echo "<li>&nbsp;".$entry['title']."</li>"; ?>
+                </a>
+            <?php } ?>
+        </ul>
+    </center>
+    <p class="backlink">
+        <a href="blog.php">&nbsp;Post a New Entry</a>
+    </p>
 </section>
 </div>
 </body>

@@ -1,5 +1,5 @@
 </div>
-	 <footer><hr/> &copy; 2015 @dammit</footer>
+	 <footer><hr/><br> <span id="copyrignt-content">&copy; 2022 Simple CMS</span></footer>
 	
 	</body>
 </html>

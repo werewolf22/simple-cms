@@ -88,7 +88,6 @@ nav ul li a {
 #main{
 	padding: 0;
     margin: 0;
-	height:600px;
 	width:100%;
 	background:#EEE489;
 }
@@ -168,4 +167,8 @@ footer {
 .backlink {
 border:0;
 text-align:right;
+}
+
+footer #copyrignt-content {
+	padding: 1em;
 }

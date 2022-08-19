@@ -7,7 +7,7 @@
 		 <div class ="container">
 			<header>
 				<nav>
-					<h1 STYLE="float:left; padding: 0px 55px;">ASCol</h1>
+					<h1 STYLE="float:left; padding: 0px 55px;">Simple CMS</h1>
 					<ul STYLE="float:left; padding: 5px 20px">
 						
 						<?php

@@ -1,11 +1,11 @@
 <html>
    <head>
-       <title>ASCoL students</title>
+       <title>Simple CMS</title>
 	   <link href="./stylesheets/main.css" rel="stylesheet" media="all" type="text/css" />
 	</head>
     <body>
 	
 	<header>
-	<h1>ASCoL</h1>
+	<h1>Simple CMS</h1>
 	</header>
 	<div id="main">
