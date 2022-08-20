@@ -4,4 +4,4 @@
 
 ## installation
 
-<p>install a web server, php, mysql in your machine, then import the `.sql` file. Now, you can launch the project from the web server root folder in browser. The initial username is `cms` and password is `12345`</p>
+<p>install a web server, php, mysql in your machine, then import the ``.sql`` file. Now, you can launch the project from the web server root folder in browser. The initial username is ``cms`` and password is ``12345``</p>
